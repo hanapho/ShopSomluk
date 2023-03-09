@@ -1,0 +1,68 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+@import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+
+.starrating > input {
+    cursor: pointer;
+    display: none;
+}
+
+/* Remove radio buttons */
+
+.starrating > label:before {
+    content: "\f005";
+    /* Star */
+    margin: 2px;
+    font-size: 2em;
+    font-family: FontAwesome;
+    display: inline-block;
+}
+
+.starrating > label {
+    color: #222222;
+    /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label {
+    color: #ffca08;
+}
+
+/* Set yellow color when star checked */
+
+.starrating > input:hover ~ label {
+    color: #ffca08;
+}
+
+/* Set yellow color when star hover */
+
+.rating {
+    padding-left: 0;
+    list-style: none;
+    display: inline-flex;
+}
+
+.rating__item--active {
+    color: #ffca08 !important;
+}
+
+.rating__item {
+    font-family: FontAwesome;
+    margin-left: 0.1rem;
+    color: #e1e1e1;
+    font-size: 15px;
+}
+
+.rating__item:before {
+    content: "\f005";
+}
+
+.note-editor {
+    background-color: #fff;
+}
